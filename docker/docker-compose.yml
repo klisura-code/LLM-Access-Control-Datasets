@@ -1,0 +1,81 @@
+version: "3.9"
+
+services:
+  # ---------------- Spider stack ----------------
+  spider-postgres:
+    container_name: spider-postgres
+    image: postgres:16
+    restart: unless-stopped
+    ports:
+      - "${SPIDER_PG_PORT_HOST:-5432}:5432"
+    environment:
+      POSTGRES_USER: ${SPIDER_PG_USER:-spider}
+      POSTGRES_PASSWORD: ${SPIDER_PG_PASSWORD:-spiderpass}
+      POSTGRES_DB: ${SPIDER_PG_DB:-spider_admin}
+    volumes:
+      - spider_pgdata:/var/lib/postgresql/data
+      # Mount your Spider DB dump / seed scripts if you have any
+      - ./spider/initdb:/docker-entrypoint-initdb.d:ro
+      # Optional: mount read-only Spider dataset assets for convenience
+      - ${SPIDER_DATA_HOST:-/dev/null}:/data/spider:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${SPIDER_PG_USER:-spider} -d ${SPIDER_PG_DB:-spider_admin}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  spider-pgadmin:
+    container_name: spider-pgadmin
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    ports:
+      - "${SPIDER_PGADMIN_PORT_HOST:-5050}:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@example.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-changeme}
+    volumes:
+      - spider_pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - spider-postgres
+
+  # ---------------- BIRD stack ----------------
+  bird-postgres:
+    container_name: bird-postgres
+    image: postgres:16
+    restart: unless-stopped
+    ports:
+      - "${BIRD_PG_PORT_HOST:-5433}:5432"
+    environment:
+      POSTGRES_USER: ${BIRD_PG_USER:-bird}
+      POSTGRES_PASSWORD: ${BIRD_PG_PASSWORD:-birdpass}
+      POSTGRES_DB: ${BIRD_PG_DB:-bird_admin}
+    volumes:
+      - bird_pgdata:/var/lib/postgresql/data
+      - ./bird/initdb:/docker-entrypoint-initdb.d:ro
+      - ${BIRD_DATA_HOST:-/dev/null}:/data/bird:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${BIRD_PG_USER:-bird} -d ${BIRD_PG_DB:-bird_admin}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  bird-pgadmin:
+    container_name: bird-pgadmin
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    ports:
+      - "${BIRD_PGADMIN_PORT_HOST:-5051}:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@example.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-changeme}
+    volumes:
+      - bird_pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - bird-postgres
+
+volumes:
+  spider_pgdata:
+  spider_pgadmin_data:
+  bird_pgdata:
+  bird_pgadmin_data:
+
