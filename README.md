@@ -31,7 +31,7 @@ LLM-Access-Control-Datasets/
 
 | Dataset | # Databases | # (User, Query) Pairs | # Permitted | # Denied | Size | 
 |----------|-------------|----------------------|--------------|-----------|-------|
-| **Spider** | 153 | 9.6K | 2.8K | 6.8K | ~9 MB | 
+| **Spider** | 153 | 19.6K | 8K | 11K | ~9 MB | 
 | **BIRD** | 80 | 35.8K | 11.9K | 23.9K | ~220 MB | 
 
 Each record includes:
