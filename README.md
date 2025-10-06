@@ -20,7 +20,7 @@ LLM-Access-Control-Datasets/
 │
 ├── docker/                       # Docker stack for reproducing Postgres instances
 │   ├── docker-compose.yml
-│   └── .env.example
+│   
 │
 ├── requirements.txt              # Python dependencies
 └── README.md                     # You are here
