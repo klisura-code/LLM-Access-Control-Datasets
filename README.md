@@ -94,14 +94,6 @@ Access via:
 
 ---
 
-## 🧠 Scripts
-
-Each dataset has its own preprocessing scripts in `/scripts/spider` and `/scripts/bird`, including:
-- `load_*_to_postgres.py` — load source databases into PostgreSQL  
-- `user_permissions_*.py` — generate per-role GRANT policies  
-- `dataset-groundtruth-*.py` — build ground-truth (permit/deny) labels  
-- `build_access_control_dataset_*.py` — assemble final JSONL dataset  
-
 All outputs are written into `/data/<dataset>/`.
 
 ## 🔐 License
