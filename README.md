@@ -30,10 +30,10 @@ LLM-Access-Control-Datasets/
 
 ## 📘 Dataset Overview
 
-| Dataset | # Databases | # (User, Query) Pairs | # Permitted | # Denied | Size | Filtered |
-|----------|-------------|----------------------|--------------|-----------|-------|-----------|
-| **Spider** | 166 | ~9.6K | ≈2.8K | ≈6.8K | ~9 MB | ✅ permission-denied only |
-| **BIRD** | 95 | 43.8K → 35.8K (filtered) | 11.9K | 23.9K | ~220 MB | ✅ only `permission denied (42501)` kept |
+| Dataset | # Databases | # (User, Query) Pairs | # Permitted | # Denied | Size | 
+|----------|-------------|----------------------|--------------|-----------|-------|
+| **Spider** | 166 | ~9.6K | ≈2.8K | ≈6.8K | ~9 MB | 
+| **BIRD** | 95 | 43.8K → 35.8K (filtered) | 11.9K | 23.9K | ~220 MB | 
 
 Each record includes:
 - `question` — natural-language query  
