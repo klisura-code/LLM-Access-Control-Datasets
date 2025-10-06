@@ -1,6 +1,6 @@
 # LLM Access Control Datasets
 
-This repository provides two large-scale datasets and companion scripts for studying **permission-aware reasoning in Large Language Models (LLMs)**. The datasets extend popular text-to-SQL benchmarks — **Spider** and **BIRD** — with role-based access control (RBAC) metadata, enabling systematic evaluation of models that must decide whether a user’s SQL query should be *permitted* or *denied* under defined access policies.
+This repository provides two large-scale datasets and companion scripts for studying **permission-aware reasoning in Large Language Models (LLMs)**. The datasets extend popular text-to-SQL benchmarks, **Spider** and **BIRD**, with role-based access control (RBAC) metadata, enabling systematic evaluation of models that must decide whether a user’s SQL query should be *permitted* or *denied* under defined access policies.
 
 ---
 
