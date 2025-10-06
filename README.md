@@ -4,7 +4,7 @@ This repository provides two large-scale datasets and companion scripts for stud
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 LLM-Access-Control-Datasets/
@@ -27,7 +27,7 @@ LLM-Access-Control-Datasets/
 
 ---
 
-## 📘 Dataset Overview
+## Dataset Overview
 
 | Dataset | # Databases | # (User, Query) Pairs | # Permitted | # Denied | Size | 
 |----------|-------------|----------------------|--------------|-----------|-------|
@@ -45,7 +45,7 @@ Each record includes:
 
 ---
 
-## 🧩 Roles and Policies
+## Roles and Policies
 
 Each database includes **four user roles** representing realistic organizational access tiers:
 
@@ -61,7 +61,7 @@ Ground truth decisions are computed by executing each query under the user’s r
 
 ---
 
-## ⚙️ Environment Setup
+## Environment Setup
 
 ```bash
 git clone https://github.com/<your-org-or-user>/LLM-Access-Control-Datasets.git
@@ -72,14 +72,14 @@ pip install -r requirements.txt
 Python ≥3.9 is recommended.
 
 
-## 🔐 License
+## License
 
 Released under the **MIT License**.  
 The original Spider and BIRD datasets are distributed under their respective academic research licenses.
 
 ---
 
-## 🧾 Acknowledgments
+## Acknowledgments
 
 This repository builds upon:
 - **Spider** — Yale NLP Group (Yu et al., 2018)  
