@@ -32,7 +32,7 @@ LLM-Access-Control-Datasets/
 
 | Dataset | # Databases | # (User, Query) Pairs | # Permitted | # Denied | Size | 
 |----------|-------------|----------------------|--------------|-----------|-------|
-| **Spider** | 166 | 9.6K | 2.8K | 6.8K | ~9 MB | 
+| **Spider** | 153 | 9.6K | 2.8K | 6.8K | ~9 MB | 
 | **BIRD** | 80 | 35.8K | 11.9K | 23.9K | ~220 MB | 
 
 Each record includes:
@@ -72,29 +72,6 @@ pip install -r requirements.txt
 
 Python ≥3.9 is recommended.
 
----
-
-## 🐘 Running with Docker
-
-You can spin up both the **Spider** and **BIRD** PostgreSQL instances using Docker Compose:
-
-```bash
-cd docker
-cp .env.example .env
-# (optional) edit .env to set dataset mount paths and credentials
-docker compose up -d
-```
-
-Access via:
-- **Spider Postgres:** `localhost:5432`
-- **BIRD Postgres:** `localhost:5433`
-- **pgAdmin UI:**  
-  - Spider → [http://localhost:5050](http://localhost:5050)  
-  - BIRD → [http://localhost:5051](http://localhost:5051)
-
----
-
-All outputs are written into `/data/<dataset>/`.
 
 ## 🔐 License
 
