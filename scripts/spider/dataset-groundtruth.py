@@ -17,12 +17,13 @@ import psycopg2
 from psycopg2 import ProgrammingError, OperationalError, errors
 
 # ── PostgreSQL super-user credentials ──────────────────────────────────────────
-PG_USER     = "dorde"
-PG_PASSWORD = "project123"
-PG_HOST     = "localhost"
-PG_PORT     = 5432
+PG_USER     = os.getenv("PG_USER", "username")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_HOST     = os.getenv("PG_HOST", "localhost")
+PG_PORT     = int(os.getenv("PG_PORT", 5432))
+
 # ── paths ──────────────────────────────────────────────────────────────────────
-DATA_DIR        = "/home/dorde/Desktop/Access-Control-Project/data/spider"
+DATA_DIR = os.getenv("DATA_DIR", os.path.expanduser("~/path/to/spider/data"))
 INPUT_CSV       = os.path.join(DATA_DIR, "spider_nl_sql_pairs.csv")
 OUTPUT_CSV      = os.path.join(DATA_DIR, "dataset-groundtruth.csv")
 # ── how many rows to store when a query succeeds (None ⇒ ALL / can be huge!) ──
