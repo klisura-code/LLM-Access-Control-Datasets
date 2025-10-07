@@ -83,7 +83,7 @@ The original Spider and BIRD datasets are distributed under their respective aca
 
 This repository builds upon:
 - **Spider** — Yale NLP Group (Yu et al., 2018)  
-- **BIRD** — Singapore Management University (Liang et al., 2023)  
+- **BIRD** —  (Liang et al., 2023)  
 
 ---
 
