@@ -3,7 +3,7 @@ import csv
 import os
 
 # Set your data directory path
-DATA_DIR = "/home/dorde/Desktop/Access-Control-Project/data/spider"
+DATA_DIR = os.getenv("DATA_DIR", os.path.expanduser("~/path/to/spider/data"))
 TRAIN_FILE = os.path.join(DATA_DIR, "train_spider.json")
 DEV_FILE = os.path.join(DATA_DIR, "dev.json")
 OUTPUT_FILE = os.path.join(DATA_DIR, "spider_nl_sql_pairs.csv")
