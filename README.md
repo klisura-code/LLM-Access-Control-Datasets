@@ -85,8 +85,6 @@ This repository builds upon:
 - **Spider** — Yale NLP Group (Yu et al., 2018)  
 - **BIRD** — Singapore Management University (Liang et al., 2023)  
 
-Access-control extensions, policies, and ground-truth computations were developed by **Đorđe Klisura** (UTSA, 2025).
-
 ---
 
 *For questions or contributions, please open an issue or pull request.*
