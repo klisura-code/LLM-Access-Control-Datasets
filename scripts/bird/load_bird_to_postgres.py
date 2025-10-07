@@ -6,14 +6,15 @@ from psycopg2 import sql, extras
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # ── Postgres connection ───────────────────────────────────────────────────────
-PG_USER = "dorde"
-PG_PASSWORD = "project123"
-PG_HOST = "localhost"
-PG_PORT = 5433  # bird-postgres exposed on 5433
+PG_USER = os.getenv("PG_USER", "username")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_HOST = os.getenv("PG_HOST", "localhost")
+PG_PORT = int(os.getenv("PG_PORT", 5433))  # Postgres exposed on 5433
 
 # ── Path to all SQLite DBs ───────────────────────────────────────────────────
-BIRD_DB_ROOT = os.path.expanduser(
-    "~/Desktop/Access-Control-Project/BIRD/bird/Bird-Databases/databases"
+BIRD_DB_ROOT = os.getenv(
+    "BIRD_DB_ROOT",
+    os.path.expanduser("~/path/to/BIRD/databases")
 )
 
 # ── Performance tuning ───────────────────────────────────────────────────────
