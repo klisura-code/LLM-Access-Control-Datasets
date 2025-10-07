@@ -14,11 +14,11 @@ Writes: user_permissions_bird.csv
 import psycopg2, csv, traceback, random, os
 
 # ── Connection parameters (BIRD stack) ───────────────────────────────────────
-PG_ADMIN_DB = "postgres"   # control/database-listing DB on the same server
-PG_USER     = "dorde"
-PG_PASSWORD = "project123"
-PG_HOST     = "localhost"
-PG_PORT     = 5433
+PG_ADMIN_DB = os.getenv("PG_ADMIN_DB", "postgres")  # control/database-listing DB
+PG_USER     = os.getenv("PG_USER", "username")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_HOST     = os.getenv("PG_HOST", "localhost")
+PG_PORT     = int(os.getenv("PG_PORT", 5433))
 
 USER_LABELS = ["User_1", "User_2", "User_3", "User_4"]
 CSV_OUTPUT  = "user_permissions_bird.csv"
