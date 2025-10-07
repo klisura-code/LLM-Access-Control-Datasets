@@ -9,7 +9,12 @@ import numpy as np
 users_df = pd.read_csv("user_with_read.csv")
 
 # Load Spider dev.json
-with open("/home/dorde/Desktop/Access-Control-Project/spider/train_spider.json", "r") as f:
+# Load Spider training data (anonymized for submission)
+train_path = os.getenv(
+    "TRAIN_SPIDER_PATH",
+    os.path.expanduser("~/path/to/spider/train_spider.json")
+)
+with open(train_path, "r") as f:
     spider_dev = json.load(f)
 
 # Group Spider entries by db_id
