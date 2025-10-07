@@ -45,7 +45,7 @@ def write_jsonl(path, rows):
 # ---------- main ----------
 def main():
     ap = argparse.ArgumentParser()
-    BIRD_DIR_DEFAULT = os.path.expanduser("~/Desktop/Access-Control-Project/BIRD/bird")
+    BIRD_DIR_DEFAULT = os.path.expanduser(os.getenv("BIRD_DIR", "~/path/to/BIRD/bird"))
     ap.add_argument("--bird_dir", default=BIRD_DIR_DEFAULT)
 
     # explicit paths allowed; sensible defaults otherwise
