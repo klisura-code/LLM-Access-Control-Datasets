@@ -11,11 +11,11 @@ Assumes roles already exist (from user_permissions_bird.py). This script only GE
 import csv, os, psycopg2
 
 # ── Connection params ────────────────────────────────────────────────────────
-PG_USER = "dorde"
-PG_PASSWORD = "project123"
-PG_HOST = "localhost"
-PG_PORT = 5433
-PG_ADMIN_DB = "postgres"   # <- use the built-in control DB
+PG_USER = os.getenv("PG_USER", "username")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_HOST = os.getenv("PG_HOST", "localhost")
+PG_PORT = int(os.getenv("PG_PORT", 5433))
+PG_ADMIN_DB = os.getenv("PG_ADMIN_DB", "postgres") # <- use the built-in control DB
 
 INPUT_CSV  = "user_permissions_bird.csv"   # <- your generated file
 OUT_POL    = "db_access_policies.csv"
