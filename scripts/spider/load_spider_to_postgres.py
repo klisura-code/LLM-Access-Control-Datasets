@@ -6,13 +6,16 @@ import datetime
 import subprocess
 
 # PostgreSQL connection settings
-PG_USER = "dorde"
-PG_PASSWORD = "project123"
-PG_HOST = "localhost"
-PG_PORT = 5432
+PG_USER = os.getenv("PG_USER", "username")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_HOST = os.getenv("PG_HOST", "localhost")
+PG_PORT = int(os.getenv("PG_PORT", 5432))
 
-# Path to Spider database folder
-SPIDER_DB_PATH = "/home/dorde/Desktop/Access-Control-Project/data/spider/database"
+# Path to Spider database folder (anonymized for submission)
+SPIDER_DB_PATH = os.getenv(
+    "SPIDER_DB_PATH",
+    os.path.expanduser("~/path/to/spider/database")
+)
 
 def map_sqlite_type_to_postgres(sqlite_type, col_name=None):
     sqlite_type = (sqlite_type or "").upper()
