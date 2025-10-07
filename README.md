@@ -81,10 +81,28 @@ The original Spider and BIRD datasets are distributed under their respective aca
 
 ## Acknowledgments
 
-This repository builds upon:
-- **Spider** — Yale NLP Group (Yu et al., 2018)  
-- **BIRD** —  (Liang et al., 2023)  
+This repository builds upon the following benchmark datasets:
 
----
+- **Spider** — developed by the Yale NLP Group, a large-scale human-labeled dataset for complex and cross-domain Text-to-SQL tasks (Yu et al., 2018).  
+- **BIRD** — a large-scale database-grounded Text-to-SQL benchmark designed to evaluate large language models as database interfaces (Li et al., 2024).  
 
-*For questions or contributions, please open an issue or pull request.*
+We thank the creators of these datasets for making their resources publicly available, which enabled this extension on access-control–aware Text-to-SQL reasoning.
+
+### References
+
+```bibtex
+@inproceedings{yu2018spider,
+  title     = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task},
+  author    = {Yu, Tao and Zhang, Rui and Yang, Kai and Yasunaga, Michihiro and Wang, Dongxu and Li, Zifan and Ma, James and Li, Irene and Yao, Qingning and Roman, Shanelle and Zhang, Zilin and Radev, Dragomir},
+  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2018}
+}
+
+@article{li2024can,
+  title   = {Can LLM Already Serve as a Database Interface? A Big Bench for Large-Scale Database Grounded Text-to-SQLs},
+  author  = {Li, Jinyang and Hui, Binyuan and Qu, Ge and Yang, Jiaxi and Li, Binhua and Li, Bowen and Wang, Bailin and Qin, Bowen and Geng, Ruiying and Huo, Nan and others},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {36},
+  year    = {2024}
+}
+```
