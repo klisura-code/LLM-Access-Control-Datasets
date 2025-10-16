@@ -1,7 +1,18 @@
 # LLM Access Control Datasets
 
-This repository provides two large-scale datasets and companion scripts for studying **permission-aware reasoning in Large Language Models (LLMs)**. The datasets extend popular text-to-SQL benchmarks, Spider and BIRD, with role-based access control (RBAC) metadata, enabling systematic evaluation of models that must decide whether a user’s SQL query should be *permitted* or *denied* under defined access policies.
+This repository provides two large-scale datasets and companion scripts for studying permission-aware reasoning in Large Language Models (LLMs). The datasets extend popular text-to-SQL benchmarks, Spider and BIRD, with role-based access control (RBAC) metadata, enabling systematic evaluation of models that must decide whether a user’s SQL query should be *permitted* or *denied* under defined access policies.
 
+# Citation
+
+If you use these datasets in your research, please cite the following paper:
+```bibtex
+@article{klisura2025role,
+  title={Role-Conditioned Refusals: Evaluating Access Control Reasoning in Large Language Models},
+  author={Klisura, {\DJ}or{\dj}e and Khoury, Joseph and Kundu, Ashish and Krishnan, Ram and Rios, Anthony},
+  journal={arXiv preprint arXiv:2510.07642},
+  year={2025}
+}
+```
 ---
 
 ## Repository Structure
