@@ -4,7 +4,7 @@ This repository provides two large-scale datasets and companion scripts for stud
 
 # Citation
 
-If you use these datasets in your research, please cite the following paper:
+If you use these datasets in your research, please cite our paper:
 ```bibtex
 @article{klisura2025role,
   title={Role-Conditioned Refusals: Evaluating Access Control Reasoning in Large Language Models},
