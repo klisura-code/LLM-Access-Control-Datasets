@@ -6,11 +6,25 @@ This repository provides two large-scale datasets and companion scripts for stud
 
 If you use these datasets in your research, please cite our paper:
 ```bibtex
-@article{klisura2025role,
-  title={Role-Conditioned Refusals: Evaluating Access Control Reasoning in Large Language Models},
-  author={Klisura, {\DJ}or{\dj}e and Khoury, Joseph and Kundu, Ashish and Krishnan, Ram and Rios, Anthony},
-  journal={arXiv preprint arXiv:2510.07642},
-  year={2025}
+@inproceedings{klisura-etal-2026-role,
+    title = "Role-Conditioned Refusals: Evaluating Access Control Reasoning in Large Language Models",
+    author = "Klisura, {\DJ}or{\dj}e  and
+      Khoury, Joseph  and
+      Kundu, Ashish  and
+      Krishnan, Ram  and
+      Rios, Anthony",
+    editor = "Demberg, Vera  and
+      Inui, Kentaro  and
+      Marquez, Llu{\'i}s",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-eacl.316/",
+    doi = "10.18653/v1/2026.findings-eacl.316",
+    pages = "6018--6034",
+    ISBN = "979-8-89176-386-9"
 }
 ```
 ---
